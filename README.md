@@ -1,1 +1,3 @@
-# group-2-project
+# Stranger Things Website
+## Group Roles
+Group Leader: Victoria Abreu
