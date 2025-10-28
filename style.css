@@ -2,13 +2,14 @@
   --primary-color: #101820; /** Dark Blue **/
   --text-color: #FFF7F2; /** White **/
   --accent-color: #E4002B; /** Red **/
+  --header-fonts: Helvetica, sans-serif;
   --body-copy-fonts: "Courier New", monospace;
   --header-height: 5rem;
 }
 
 .body {
+  background-color: #101820;
   background-image: url(./images/background.png);
-  background-size: cover;
   color: var(--text-color);
   margin: 0;
   display: flex;
@@ -17,7 +18,7 @@
 }
 
 .header {
-  font-family: Helvetica, sans-serif;
+  font-family: var(--header-fonts);
 }
 
 .header_nav {
@@ -64,8 +65,17 @@
 .main {
   font-family: "Courier New", monospace;
   position: relative;
-  top: calc(var(--header-height) + 1rem);
-  padding: 1rem;
+  top: calc(var(--header-height) + .5rem);
+  padding: 0 1rem;
+  overflow: auto;
+  z-index: -1;
+}
+
+.main_header {
+  font-size: 5rem;
+  color: var(--accent-color);
+  font-family: var(--header-fonts);
+  text-align: center;
 }
 
 .footer {
@@ -77,6 +87,30 @@
   color: var(--text-color);
   border-top: .3rem solid var(--accent-color);
   font-family: "Courier New", monospace;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}
+
+/* Transitions and Animations */
+.img-fadeIn {
+  animation-name: imageFadeIn;
+  animation-duration: 5s;
+}
+
+@keyframes imageFadeIn {
+  0%   {opacity: 0;}
+  100% {opacity: 1;}
+}
+
+.links-transition {
+  transition: all 1s;
+}
+
+.links-transition:hover {
+  color: var(--accent-color);
+  text-decoration: underline;
 }
 
 /* tablet mobile site */
@@ -106,9 +140,5 @@
     width: 100%;
     background-color: var(--primary-color);
     border-bottom: .25rem solid var(--accent-color);
-  }
-
-  .main {
-    z-index: -1;
   }
 }
