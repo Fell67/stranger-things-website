@@ -2,7 +2,7 @@
   --primary-color: #101820; /** Dark Blue **/
   --text-color: #FFF7F2; /** White **/
   --accent-color: #E4002B; /** Red **/
-  --header-fonts: Helvetica, sans-serif;
+  --header-fonts: Georgia, serif;
   --body-copy-fonts: "Courier New", monospace;
   --header-height: 5rem;
 }
@@ -18,7 +18,7 @@
 }
 
 .header {
-  font-family: var(--header-fonts);
+  font-family: var(--body-copy-fonts);
 }
 
 .header_nav {
@@ -35,7 +35,7 @@
 .header_nav_logo {
   margin-right: auto;
   padding: 1em;
-  height: 2.5rem;
+  height: 3rem;
 }
 
 .header_nav_logo_image {
@@ -76,6 +76,12 @@
   color: var(--accent-color);
   font-family: var(--header-fonts);
   text-align: center;
+}
+
+.main_subheader {
+  font-size: 2.5rem;
+  color: var(--accent-color);
+  font-family: var(--header-fonts);
 }
 
 .footer {
