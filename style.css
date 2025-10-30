@@ -76,6 +76,7 @@
   color: var(--accent-color);
   font-family: var(--header-fonts);
   text-align: center;
+  text-transform: uppercase;
 }
 
 .main_subheader {
