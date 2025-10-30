@@ -1,0 +1,151 @@
+:root {
+  --primary-color: #101820; /** Dark Blue **/
+  --text-color: #FFF7F2; /** White **/
+  --accent-color: #E4002B; /** Red **/
+  --header-fonts: Georgia, serif;
+  --body-copy-fonts: "Courier New", monospace;
+  --header-height: 5rem;
+}
+
+.body {
+  background-color: #101820;
+  background-image: url(./images/background.png);
+  color: var(--text-color);
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.header {
+  font-family: var(--body-copy-fonts);
+}
+
+.header_nav {
+  background-color: var(--primary-color);
+  border-bottom: .3rem solid var(--accent-color);
+  display: flex;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: var(--header-height);
+}
+
+.header_nav_logo {
+  margin-right: auto;
+  padding: 1em;
+  height: 3rem;
+}
+
+.header_nav_logo_image {
+  height: inherit;
+}
+
+.header_nav_pages_link {
+  align-content: center;
+}
+
+.header_nav_link_icon {
+  display: none;
+}
+
+.header_nav_pages {
+  padding: 1em;
+  display: flex;
+  gap: 2rem;
+}
+
+.header_nav_pages_link {
+  text-decoration: none;
+  color: var(--text-color);
+  font-size: 1.5rem;
+}
+
+.main {
+  font-family: "Courier New", monospace;
+  position: relative;
+  top: calc(var(--header-height) + .5rem);
+  padding: 0 1rem;
+  overflow: auto;
+  z-index: -1;
+}
+
+.main_header {
+  font-size: 5rem;
+  color: var(--accent-color);
+  font-family: var(--header-fonts);
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.main_subheader {
+  font-size: 2.5rem;
+  color: var(--accent-color);
+  font-family: var(--header-fonts);
+}
+
+.footer {
+  margin-top: auto;
+  background-color: var(--primary-color);
+  text-align: center;
+  text-transform: uppercase;
+  padding: 24px 0;
+  color: var(--text-color);
+  border-top: .3rem solid var(--accent-color);
+  font-family: "Courier New", monospace;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}
+
+/* Transitions and Animations */
+.img-fadeIn {
+  animation-name: imageFadeIn;
+  animation-duration: 5s;
+}
+
+@keyframes imageFadeIn {
+  0%   {opacity: 0;}
+  100% {opacity: 1;}
+}
+
+.links-transition {
+  transition: all 1s;
+}
+
+.links-transition:hover {
+  color: var(--accent-color);
+  text-decoration: underline;
+}
+
+/* tablet mobile site */
+@media screen and (max-width: 1255px) {
+  .header_nav {
+    text-align: center;
+    flex-wrap: wrap;
+  }
+
+  .header_nav_logo {
+    padding-bottom: 3%;
+  }
+
+  .header_nav_link_icon {
+    display: inline;
+    padding: 1em;
+    height: 2.5rem;
+  }
+
+  .header_nav_pages {
+    flex-direction: column;
+    text-align: center;
+    flex-basis: 100%;
+    display: none;
+    position: fixed;
+    top: calc(var(--header-height) + .5rem);
+    width: 100%;
+    background-color: var(--primary-color);
+    border-bottom: .25rem solid var(--accent-color);
+  }
+}
