@@ -122,6 +122,7 @@
 .img-block {
   display: block;
   object-fit: contain;
+  align-self: center;
 }
 
 .footer {
