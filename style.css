@@ -5,6 +5,7 @@
   --header-fonts: Georgia, serif;
   --body-copy-fonts: "Courier New", monospace;
   --header-height: 5rem;
+  --footer-height: 1rem;
 }
 
 .body {
@@ -30,6 +31,7 @@
   left: 0;
   width: 100%;
   height: var(--header-height);
+  z-index: 1;
 }
 
 .header_nav_logo {
@@ -64,11 +66,19 @@
 
 .main {
   font-family: "Courier New", monospace;
-  position: relative;
-  top: calc(var(--header-height) + .5rem);
-  padding: 0 1rem;
-  overflow: auto;
-  z-index: -1;
+}
+
+.main_hero {
+  height: 30em;
+  background-color: var(--primary-color);
+  background-image: url(./images/forest.jpg);
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  text-align: center;
 }
 
 .main_header {
@@ -79,10 +89,42 @@
   text-transform: uppercase;
 }
 
+.button {
+  background-color: var(--accent-color);
+  border: none;
+  padding: 12px 24px;
+  border-radius: 12px;
+  text-transform: uppercase;
+  color: var(--text-color);
+  text-decoration: none;
+}
+
+.main_article {
+  padding: 1rem;
+}
+
 .main_subheader {
   font-size: 2.5rem;
   color: var(--accent-color);
   font-family: var(--header-fonts);
+}
+
+.section_flexRow {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.section_flexGrow {
+  flex: 2;
+}
+
+.img-paddingAround {
+  padding: .5rem;
+}
+
+.img-block {
+  display: block;
 }
 
 .footer {
@@ -94,10 +136,6 @@
   color: var(--text-color);
   border-top: .3rem solid var(--accent-color);
   font-family: "Courier New", monospace;
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  width: 100%;
 }
 
 /* Transitions and Animations */
@@ -143,7 +181,7 @@
     flex-basis: 100%;
     display: none;
     position: fixed;
-    top: calc(var(--header-height) + .5rem);
+    top: calc(var(--header-height) + .2rem);
     width: 100%;
     background-color: var(--primary-color);
     border-bottom: .25rem solid var(--accent-color);
