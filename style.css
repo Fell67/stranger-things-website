@@ -112,19 +112,16 @@
 .section_flexRow {
   display: flex;
   justify-content: center;
-  flex-wrap: wrap;
-}
-
-.section_flexGrow {
-  flex: 2;
+  flex-wrap: nowrap;
 }
 
 .img-paddingAround {
-  padding: .5rem;
+  padding: 2rem;
 }
 
 .img-block {
   display: block;
+  object-fit: contain;
 }
 
 .footer {
@@ -185,5 +182,10 @@
     width: 100%;
     background-color: var(--primary-color);
     border-bottom: .25rem solid var(--accent-color);
+  }
+
+  .section_flexRow {
+    flex-direction: column;
+    flex-wrap: wrap;
   }
 }
