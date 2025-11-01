@@ -16,7 +16,7 @@
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-  min-width: min-content
+  min-width: min-content;
 }
 
 .header {
@@ -83,7 +83,7 @@
 }
 
 .main_header {
-  font-size: 5rem;
+  font-size: 4rem;
   color: var(--accent-color);
   font-family: var(--header-fonts);
   text-align: center;
@@ -105,7 +105,7 @@
 }
 
 .main_subheader {
-  font-size: 2.5rem;
+  font-size: 2rem;
   color: var(--accent-color);
   font-family: var(--header-fonts);
 }
@@ -113,17 +113,17 @@
 .section_flexRow {
   display: flex;
   justify-content: center;
-  flex-wrap: nowrap;
 }
 
 .img-paddingAround {
-  padding: 2rem;
+  padding: 1em;
 }
 
 .img-block {
   display: block;
-  object-fit: contain;
+  max-width: 40%;
   align-self: center;
+  object-fit: cover;
 }
 
 .footer {
@@ -189,5 +189,9 @@
   .section_flexRow {
     flex-direction: column;
     flex-wrap: wrap;
+  }
+
+  .img-block {
+    max-width: 90%;
   }
 }
