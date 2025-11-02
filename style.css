@@ -149,3 +149,171 @@
     border-bottom: .25rem solid var(--accent-color);
   }
 }
+/* ===== Characters Page (Savannah) — rows, alternating, ===== */
+
+.characters-page .main {
+  z-index: 0;
+}
+
+.characters-page .page-title {
+  text-align: center;
+  padding: 3rem 1rem 2rem;
+}
+
+.characters-page .page-title h1 {
+  font-family: var(--header-fonts);
+  text-transform: uppercase;
+  color: var(--accent-color);
+  font-size: clamp(2.4rem, 5vw, 3.4rem);
+}
+
+.characters-page .page-title__sub {
+  font-family: var(--body-copy-fonts);
+  color: rgba(255, 247, 242, .85);
+  max-width: 520px;
+  margin: .5rem auto 0;
+}
+
+/* section dividers */
+.characters-page .characters-group {
+  margin-top: 3rem;
+}
+
+.characters-page .characters-group__title {
+  font-family: var(--header-fonts);
+  font-size: 1.4rem;
+  text-transform: uppercase;
+  color: var(--accent-color);
+  margin-bottom: 1.5rem;
+  border-left: 4px solid var(--accent-color);
+  padding-left: .75rem;
+}
+
+/* row layout */
+.characters-page .character-row {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+  justify-content: flex-start;
+  margin-bottom: 2rem;
+  background: rgba(16, 24, 32, 0.35);
+  border: 1px solid rgba(228, 0, 43, 0.25);
+  border-radius: 1rem;
+  padding: 1.8rem 2rem;
+  backdrop-filter: blur(2px);
+  transition: transform 0.25s ease, background 0.25s ease, border 0.25s ease, box-shadow 0.25s ease;
+}
+
+/* image box */
+.characters-page .character-row__image {
+  width: 200px;
+  min-width: 200px;
+  height: 200px;
+  background: rgba(0,0,0,.35);
+  border: 2px solid rgba(255,247,242,.8);
+  border-radius: .6rem;
+  background-size: cover;
+  background-position: center center; 
+  align-self: center;
+}
+
+/* hover interaction + red glow */
+.characters-page .character-row:hover {
+  transform: scale(1.03);
+  background: rgba(16, 24, 32, 0.35); 
+  border-color: var(--accent-color);
+  box-shadow: 0 0 15px 3px rgba(228, 0, 43, 0.55); 
+  cursor: pointer;
+}
+
+.characters-page .character-row:hover .character-row__image {
+  filter: brightness(1.2);
+}
+
+/* alternate sides */
+.characters-page .character-row--reverse {
+  flex-direction: row-reverse !important;
+}
+
+/* villain box tint */
+.characters-page .character-row__image--villain {
+  background: radial-gradient(circle at top, rgba(228,0,43,.35), rgba(0,0,0,.4));
+  border: 2px solid rgba(228,0,43,1);
+}
+
+/* text alignment */
+.characters-page .character-row__text {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* name and role */
+.characters-page .character-row__name {
+  font-family: var(--header-fonts);
+  font-size: 1.7rem;        
+  text-transform: uppercase;
+  margin-bottom: .3rem;
+  color: var(--accent-color);
+  letter-spacing: 0.03em;
+  text-shadow: 0 0 4px rgba(228, 0, 43, 0.45);
+}
+
+.characters-page .character-row__role {
+  font-family: var(--header-fonts);   
+  font-size: 0.95rem;         
+  font-style: italic;         
+  color: var(--accent-color);         
+  margin-top: 0.3rem;
+  margin-bottom: 1.2rem;
+  opacity: 0.9;
+}
+
+/* bio */
+.characters-page .character-row__bio {
+  font-family: var(--body-copy-fonts);
+  color: var(--text-color);
+  opacity: .9;
+  margin-bottom: .6rem;
+  line-height: 1.5;
+}
+
+/* CTA */
+.characters-page .cta {
+  text-align: center;
+  margin-top: 3.5rem;
+  margin-bottom: 6rem; 
+}
+
+.characters-page .cta__btn {
+  display: inline-block;
+  background: var(--accent-color);
+  color: var(--primary-color);
+  padding: .9rem 1.6rem;
+  border-radius: 999px;
+  text-decoration: none;
+  font-family: var(--body-copy-fonts);
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  transition: all 0.25s ease;
+}
+
+.characters-page .cta__btn:hover {
+  filter: brightness(1.2);
+  transform: scale(1.05);
+}
+
+/* mobile */
+@media (max-width: 768px) {
+  .characters-page .character-row,
+  .characters-page .character-row--reverse {
+    flex-direction: column !important;
+    text-align: center;
+  }
+
+  .characters-page .character-row__image {
+    width: 100%;
+    height: 200px;
+  }
+}
