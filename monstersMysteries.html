@@ -6,6 +6,34 @@
     <title>Stranger Things</title>
     <link rel="shortcut icon" href="./images/Stranger_Things_logo.svg">
     <link rel="stylesheet" href="style.css">
+    <style>
+        /* Bring cards above the .main z-index:-1 layer so hover can work */
+        .monster-card {
+            position: relative;
+            z-index: 2;
+            transition: box-shadow 0.28s ease, transform 0.28s ease;
+            /* keep inline styles (background, border, padding) as-is on the element */
+        }
+
+        /* red glow on hover */
+        .monster-card:hover {
+            box-shadow:
+            0 0 12px rgba(228,0,43,0.9),
+            0 0 28px rgba(228,0,43,0.6),
+            0 8px 30px rgba(0,0,0,0.6);
+            transform: translateY(-4px) scale(1.02);
+        }
+
+        /* slightly enlarge the header inside the card for emphasis */
+        .monster-card:hover .main_subheader,
+        .monster-card:hover h3 {
+            transform: scale(1.06);
+            transition: transform 0.28s ease;
+            color: var(--accent-color);
+            text-shadow: 0 0 8px rgba(228,0,43,0.45);
+        }
+    </style>
+    
 </head>
 <body class="body">
     <header class="header">
@@ -21,8 +49,119 @@
         </nav>
     </header>
     <main class="main">
-        I am main content of the Monsters & Mysteries page
-    </main>
+        <h1 class="main_header">Monsters and Mysteries</h1>
+        <p style="text-align: center; font-size: 1.2rem; max-width: 700px; margin: 0 auto;">
+          From the depths of the Upside Down come the creatures that haunt Hawkins.
+          Learn about their origins, powers, and the secrets that connect them all.
+        </p>
+
+    <!-- MONSTER GALLERY -->
+        <section class="monster-gallery" style="margin-top: 4rem;">
+            <h2 class="main_subheader">Creatures of the Upside Down</h2>
+            <div
+            class="monster-grid"
+            style="
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+                gap: 2rem;
+                margin-top: 2rem;
+                margin-bottom: 10rem;
+            "
+            >
+            <!-- MONSTER CARD 1 -->
+            <article
+                class="monster-card"
+                style="
+                background-color: rgba(255, 247, 242, 0.05);
+                border: 1px solid var(--accent-color);
+                border-radius: 0.5rem;
+                padding: 1rem;
+                text-align: center;
+                "
+            >
+                <img
+                src="https://static0.colliderimages.com/wordpress/wp-content/uploads/2022/08/stranger-things-vfx-demogorgon-social-featured.jpg?q=50&fit=crop&w=825&dpr=1.5"
+                alt="Demogorgon"
+                style="width: 100%; height: auto;"
+                />
+                <h3 class="main_subheader" style="font-size: 1.5rem;">Demogorgon</h3>
+                <p>
+                The first terror from the Upside Down. A humanoid beast with a
+                flowered head of teeth, hunting by scent and sound.
+                </p>
+            </article>
+
+            <!-- MONSTER CARD 2 -->
+            <article
+                class="monster-card"
+                style="
+                background-color: rgba(255, 247, 242, 0.05);
+                border: 1px solid var(--accent-color);
+                border-radius: 0.5rem;
+                padding: 1rem;
+                text-align: center;
+                "
+            >
+                <img
+                src="https://static0.colliderimages.com/wordpress/wp-content/uploads/2022/07/Mind_Flayer.jpg"
+                alt="Mind Flayer"
+                style="width: 100%; height: auto;"
+                />
+                <h3 class="main_subheader" style="font-size: 1.5rem;">The Mind Flayer</h3>
+                <p>
+                A hive-mind entity that has the power to control countless creatures and people through psychic
+                domination. It has the ability to manipulate lesser creatures and possess those it sinks its psychic tendrils into. Its goal: to merge the Upside Down and Hawkins together into chaos.
+                </p>
+            </article>
+
+            <!-- MONSTER CARD 3 -->
+            <article
+                class="monster-card"
+                style="
+                background-color: rgba(255, 247, 242, 0.05);
+                border: 1px solid var(--accent-color);
+                border-radius: 0.5rem;
+                padding: 1rem;
+                text-align: center;
+                "
+            >
+                <img
+                src="https://static0.colliderimages.com/wordpress/wp-content/uploads/2022/07/demodog.jpg?q=50&fit=crop&w=825&dpr=1.5"
+                alt="Demodogs"
+                style="width: 100%; height: auto;"
+                />
+                <h3 class="main_subheader" style="font-size: 1.5rem;">Demodogs</h3>
+                <p>
+                These creatures are adolescent Demogorgons, and just as deadly. They're vicious, loyal, and incredibly fast, able to chase down prey of any size. They move in packs and can easily overwhelm prey through sheer numbers and agility.
+                </p>
+            </article>
+
+            <!-- MONSTER CARD 4 -->
+            <article
+                class="monster-card"
+                style="
+                background-color: rgba(255, 247, 242, 0.05);
+                border: 1px solid var(--accent-color);
+                border-radius: 0.5rem;
+                padding: 1rem;
+                text-align: center;
+                "
+            >
+                <img
+                src="https://static0.colliderimages.com/wordpress/wp-content/uploads/2022/07/stranger-things-Vecna-Jamie-Campbell-Bower.jpg"
+                alt="Vecna"
+                style="width: 100%; height: auto;"
+                />
+                <h3 class="main_subheader" style="font-size: 1.5rem;">Vecna</h3>
+                <p>
+                    A dark god of the Upside Down. He uses the fears, guilt, and trauma of Hawkins' residents,
+                    shaping their nightmares into deadly daytime visions. Framed as the ultimate evil that the heroes of Hawkins have to face,
+                    Vecna has twisted the Upside Down to his will, and aims to spread his control into reality through Hawkins.
+                </p>
+            </article>
+            </div>
+        </section>
+
     <footer class="footer">
         &copy; 2025
     </footer>
