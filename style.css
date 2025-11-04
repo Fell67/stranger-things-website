@@ -91,18 +91,22 @@
 
 .bts_header {
   font-size: 3.5rem;
-  padding: 85px 0 0 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   color: var(--accent-color);
   font-family: var(--header-fonts);
   text-align: center;
+  opacity: 100%;
   text-transform: uppercase;
   max-height: 150px;
-  min-width: min-content
+  min-width: min-content;
 }
 
 .bts_hero {
   height: 20em;
-  background-color: var(--primary-color);
+  background-image: url(images/btsheader2.jpeg);
+  background-image: -moz-linear-gradient(top, rgba(16, 24, 32, 0.6) 0%, rgba(16, 24, 32, 0.6) 100%), url(images/btsheader2.jpeg);
   background-size: cover;
   background-position: center;
   display: flex;
@@ -155,6 +159,8 @@ img {
 
 .bts_subheader {
   font-size: 2rem;
+  font-family: var(--header-fonts);
+  color: var(--accent-color);
   text-transform: capitalize;
   text-align: center;
 }
@@ -251,17 +257,17 @@ img {
 }
 
 .btsgallery1:hover {
-  transform: scale(1.05);
+  transform: scale(1.5);
   transition: transform 0.3s;
 }
 
 .btsgallery2:hover {
-  transform: scale(1.05);
+  transform: scale(1.5);
   transition: transform 0.3s;
 }
 
 .btsgallery3:hover {
-  transform: scale(1.05);
+  transform: scale(1.5);
   transition: transform 0.3s;
 }
 
