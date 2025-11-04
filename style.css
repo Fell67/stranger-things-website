@@ -90,7 +90,7 @@
   text-transform: uppercase;
 }
 
-.header__outline {
+.header--outline {
   text-shadow:
     -2px -2px 0 var(--primary-color), /* Top-left shadow */
     2px -2px 0 var(--primary-color),  /* Top-right shadow */
@@ -118,7 +118,7 @@
   font-family: var(--header-fonts);
 }
 
-.section__flex_row {
+.section__flex_row_desktop {
   display: flex;
   justify-content: center;
 }
@@ -165,7 +165,7 @@
   text-decoration: underline;
 }
 
-/* tablet mobile site */
+/* tablet and mobile site */
 @media screen and (max-width: 1255px) {
   .header__nav {
     text-align: center;
@@ -198,7 +198,7 @@
     font-size: x-large;
   }
 
-  .section__flex_row {
+  .section__flex_row_desktop {
     flex-direction: column;
     flex-wrap: wrap;
   }
