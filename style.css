@@ -5,6 +5,7 @@
   --header-fonts: Georgia, serif;
   --body-copy-fonts: "Courier New", monospace;
   --header-height: 5rem;
+  --footer-height: 1rem;
 }
 
 .body {
@@ -15,13 +16,15 @@
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+  min-width: min-content;
+  max-width: 100vw;
 }
 
 .header {
   font-family: var(--body-copy-fonts);
 }
 
-.header_nav {
+.header__nav {
   background-color: var(--primary-color);
   border-bottom: .3rem solid var(--accent-color);
   display: flex;
@@ -30,33 +33,34 @@
   left: 0;
   width: 100%;
   height: var(--header-height);
+  z-index: 1;
 }
 
-.header_nav_logo {
+.header__nav__logo {
   margin-right: auto;
-  padding: 1em;
+  padding: 1rem;      
   height: 3rem;
 }
 
-.header_nav_logo_image {
+.header__nav__logo__image {
   height: inherit;
 }
 
-.header_nav_pages_link {
+.header__nav__pages__link {
   align-content: center;
 }
 
-.header_nav_link_icon {
+.header__nav__link__icon {
   display: none;
 }
 
-.header_nav_pages {
+.header__nav__pages {
   padding: 1em;
   display: flex;
   gap: 2rem;
 }
 
-.header_nav_pages_link {
+.header__nav__pages__link {
   text-decoration: none;
   color: var(--text-color);
   font-size: 1.5rem;
@@ -64,25 +68,71 @@
 
 .main {
   font-family: "Courier New", monospace;
-  position: relative;
-  top: calc(var(--header-height) + .5rem);
-  padding: 0 1rem;
-  overflow: auto;
-  z-index: -1;
+  padding-top: 6rem;
 }
 
-.main_header {
-  font-size: 5rem;
+.main__hero {
+  height: 30em;
+  background-color: var(--primary-color);
+  background-image: url(./images/forest.jpg);
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.main__header {
+  font-size: 4rem;
   color: var(--accent-color);
   font-family: var(--header-fonts);
   text-align: center;
   text-transform: uppercase;
 }
 
-.main_subheader {
-  font-size: 2.5rem;
+.header--outline {
+  text-shadow:
+    -2px -2px 0 var(--primary-color), /* Top-left shadow */
+    2px -2px 0 var(--primary-color),  /* Top-right shadow */
+    -2px 2px 0 var(--primary-color),  /* Bottom-left shadow */
+    2px 2px 0 var(--primary-color);   /* Bottom-right shadow */
+}
+
+.button {
+  background-color: var(--accent-color);
+  border: none;
+  padding: 12px 24px;
+  border-radius: 12px;
+  text-transform: uppercase;
+  color: var(--text-color);
+  text-decoration: none;
+}
+
+.main__article {
+  padding: 1rem;
+}
+
+.main__subheader {
+  font-size: 2rem;
   color: var(--accent-color);
   font-family: var(--header-fonts);
+}
+
+.section__flex_row_desktop {
+  display: flex;
+  justify-content: center;
+}
+
+.img--padding_around {
+  padding: 1em;
+}
+
+.img--block {
+  display: block;
+  max-width: 40%;
+  align-self: center;
+  object-fit: cover;
 }
 
 .footer {
@@ -98,10 +148,11 @@
   bottom: 0;
   left: 0;
   width: 100%;
+
 }
 
 /* Transitions and Animations */
-.img-fadeIn {
+.img--fade_in {
   animation-name: imageFadeIn;
   animation-duration: 5s;
 }
@@ -111,22 +162,22 @@
   100% {opacity: 1;}
 }
 
-.links-transition {
+.links--transition {
   transition: all 1s;
 }
 
-.links-transition:hover {
+.links--transition:hover {
   color: var(--accent-color);
   text-decoration: underline;
 }
 
+
 /* Monstes and Mysteries (Katie) Additional Styling*/
 
 /* Monster Gallery Section */
-.monster-gallery {
+.gallery {
   text-align: center;
   margin: 2rem auto;
-  
 }
 
 /* Shared Subheader Styling */
@@ -139,7 +190,7 @@
 }
 
 /* Monster Grid Layout */
-.monster-grid {
+.gallery__grid {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -208,7 +259,7 @@
   margin-bottom: 1.5rem;
 }
 
-.science-content {
+.science__content {
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
@@ -240,36 +291,48 @@
   margin-right: 50px;
 }
 
-
-/* tablet mobile site */
+/* tablet and mobile site */
 @media screen and (max-width: 1255px) {
-.header_nav {
-  text-align: center;
-  flex-wrap: wrap;
-}
+  .header__nav {
+    text-align: center;
+    flex-wrap: wrap;
+  }
 
-  .header_nav_logo {
+  .header__nav__logo {
     padding-bottom: 3%;
   }
 
-  .header_nav_link_icon {
+  .header__nav__link__icon {
     display: inline;
     padding: 1em;
     height: 2.5rem;
   }
 
-  .header_nav_pages {
+  .header__nav__pages {
     flex-direction: column;
     text-align: center;
     flex-basis: 100%;
     display: none;
     position: fixed;
-    top: calc(var(--header-height) + .5rem);
+    top: calc(var(--header-height) + .2rem);
     width: 100%;
     background-color: var(--primary-color);
     border-bottom: .25rem solid var(--accent-color);
   }
-  
+
+  .button {
+    font-size: x-large;
+  }
+
+  .section__flex_row_desktop {
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+
+  .img--block {
+    max-width: 90%;
+  }
+
   /* Monsters & Mysteries Media Query Section*/
   .monster-grid {
     flex-direction: column;
@@ -298,4 +361,5 @@
     margin-right: 50px;
     margin-bottom: 5px;
   }
+
 }
