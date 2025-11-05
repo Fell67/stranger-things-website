@@ -1,15 +1,28 @@
-// Used to open and close the menu button in the nav menu
+// ===== Mobile Nav Toggle =====
 function showAndHideClass(className) {
-    // Get the html of the element with the class name
     const headerNavPages = document.querySelector(className);
 
-    // Check if the element exists update how it is displayed
     if (headerNavPages) {
-        // If the display is none or blank then change it to flex else change it to none
         if (headerNavPages.style.display === 'none' || headerNavPages.style.display === '') {
-            headerNavPages.style.display = 'flex'
+            headerNavPages.style.display = 'flex';
         } else {
-            headerNavPages.style.display = ''
-        } 
+            headerNavPages.style.display = '';
+        }
     }
 }
+
+// ===== Fade-in on Scroll for Images =====
+document.addEventListener("DOMContentLoaded", () => {
+    const images = document.querySelectorAll('.img--fade_in');
+
+    const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('is-visible');
+                observer.unobserve(entry.target); // stops watching once visible
+            }
+        });
+    }, { threshold: 0.2 });
+
+    images.forEach(img => observer.observe(img));
+});
