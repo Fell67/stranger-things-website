@@ -16,15 +16,13 @@
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-  min-width: min-content;
-  max-width: 100vw;
 }
 
 .header {
   font-family: var(--body-copy-fonts);
 }
 
-.header__nav {
+.header_nav {
   background-color: var(--primary-color);
   border-bottom: .3rem solid var(--accent-color);
   display: flex;
@@ -36,31 +34,31 @@
   z-index: 1;
 }
 
-.header__nav__logo {
+.header_nav_logo {
   margin-right: auto;
   padding: 1em;
   height: 3rem;
 }
 
-.header__nav__logo__image {
+.header_nav_logo_image {
   height: inherit;
 }
 
-.header__nav__pages__link {
+.header_nav_pages_link {
   align-content: center;
 }
 
-.header__nav__link__icon {
+.header_nav_link_icon {
   display: none;
 }
 
-.header__nav__pages {
+.header_nav_pages {
   padding: 1em;
   display: flex;
   gap: 2rem;
 }
 
-.header__nav__pages__link {
+.header_nav_pages_link {
   text-decoration: none;
   color: var(--text-color);
   font-size: 1.5rem;
@@ -70,20 +68,21 @@
   font-family: "Courier New", monospace;
 }
 
-.main__hero {
+.main_hero {
   height: 30em;
   background-color: var(--primary-color);
   background-image: url(./images/forest.jpg);
+  background-size: cover;
   background-position: center;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-evenly;
   align-items: center;
   text-align: center;
 }
 
-.main__header {
-  font-size: 4rem;
+.main_header {
+  font-size: 5rem;
   color: var(--accent-color);
   font-family: var(--header-fonts);
   text-align: center;
@@ -118,7 +117,7 @@
   text-align: center;
 }
 
-iframe {
+.iframe_container {
   width: 560px;
   height: 340px;
   justify-content: center;
@@ -126,17 +125,9 @@ iframe {
   box-sizing: border-box;
 }
 
-img {
+.bts_gif {
   max-width: 100%;
   box-sizing: border-box;
-}
-
-.header--outline {
-  text-shadow:
-    -2px -2px 0 var(--primary-color), /* Top-left shadow */
-    2px -2px 0 var(--primary-color),  /* Top-right shadow */
-    -2px 2px 0 var(--primary-color),  /* Bottom-left shadow */
-    2px 2px 0 var(--primary-color);   /* Bottom-right shadow */
 }
 
 .button {
@@ -149,13 +140,13 @@ img {
   text-decoration: none;
 }
 
-.main__article {
+.main_article {
   padding: 1rem;
 }
 
-.main__subheader {
-  font-size: 2rem;
-  color: var(--accent-color);
+.main_subheader {
+  font-size: 2.5rem;
+  color: var(--text-color);
   font-family: var(--header-fonts);
 }
 
@@ -179,6 +170,21 @@ img {
   align-items: flex-start;
   justify-content: center;
   border:#E4002B solid .25px;
+}
+
+details {
+  border: 1px solid var(--accent-color);
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+summary {
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.content {
+  padding-top: 10px;
 }
 
 .bts_content2 {
@@ -216,20 +222,22 @@ img {
   padding: 30px 10px 30px 10px;
 }
 
-.section__flex_row_desktop {
+.section_flexRow {
   display: flex;
   justify-content: center;
+  flex-wrap: wrap;
 }
 
-.img--padding_around {
-  padding: 1em;
+.section_flexGrow {
+  flex: 2;
 }
 
-.img--block {
+.img-paddingAround {
+  padding: .5rem;
+}
+
+.img-block {
   display: block;
-  max-width: 40%;
-  align-self: center;
-  object-fit: cover;
 }
 
 .footer {
@@ -244,7 +252,7 @@ img {
 }
 
 /* Transitions and Animations */
-.img--fade_in {
+.img-fadeIn {
   animation-name: imageFadeIn;
   animation-duration: 5s;
 }
@@ -254,11 +262,11 @@ img {
   100% {opacity: 1;}
 }
 
-.links--transition {
+.links-transition {
   transition: all 1s;
 }
 
-.links--transition:hover {
+.links-transition:hover {
   color: var(--accent-color);
   text-decoration: underline;
 }
@@ -278,24 +286,24 @@ img {
   transition: transform 0.3s;
 }
 
-/* tablet and mobile site */
+/* tablet mobile site */
 @media screen and (max-width: 1255px) {
-  .header__nav {
+  .header_nav {
     text-align: center;
     flex-wrap: wrap;
   }
 
-  .header__nav__logo {
+  .header_nav_logo {
     padding-bottom: 3%;
   }
 
-  .header__nav__link__icon {
+  .header_nav_link_icon {
     display: inline;
     padding: 1em;
     height: 2.5rem;
   }
 
-  .header__nav__pages {
+  .header_nav_pages {
     flex-direction: column;
     text-align: center;
     flex-basis: 100%;
@@ -305,19 +313,6 @@ img {
     width: 100%;
     background-color: var(--primary-color);
     border-bottom: .25rem solid var(--accent-color);
-  }
-
-  .button {
-    font-size: x-large;
-  }
-
-  .section__flex_row_desktop {
-    flex-direction: column;
-    flex-wrap: wrap;
-  }
-
-  .img--block {
-    max-width: 90%;
   }
 }
 

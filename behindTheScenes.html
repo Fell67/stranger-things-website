@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,66 +7,55 @@
     <link rel="shortcut icon" href="./images/Stranger_Things_logo.svg">
     <link rel="stylesheet" href="style.css">
 </head>
-
 <body class="body">
     <header class="header">
-        <nav class="header__nav">
-            <a href="index.html" class="header__nav__logo"><img src="./images/Stranger_Things_logo.svg"
-                    class="header__nav__logo__image" alt="Stranger Things Logo" /></a>
-            <a onclick="showAndHideClass('.header__nav__pages')" class="header__nav_link"><img
-                    src="images/List-Menu.svg" alt="List Menu" class="header__nav__link__icon" /></a>
-            <div class="header__nav__pages">
-                <a href="index.html" class="header__nav__pages__link links--transition">Home</a>
-                <a href="characters.html" class="header__nav__pages__link links--transition">Characters</a>
-                <a href="monstersMysteries.html" class="header__nav__pages__link links--transition">Monsters &
-                    Mysteries</a>
-                <a href="behindTheScenes.html" class="header__nav__pages__link links--transition">Behind the Scenes</a>
+        <nav class="header_nav">
+            <a href="index.html" class="header_nav_logo"><img src="./images/Stranger_Things_logo.svg" class="header_nav_logo_image" alt="Stranger Things Logo"/></a>
+            <a onclick="showAndHideClass('.header_nav_pages')" class="header_nav_link"><img src="images/List-Menu.svg" alt="List Menu" class="header_nav_link_icon"/></a>
+            <div class="header_nav_pages">
+                <a href="index.html" class="header_nav_pages_link links-transition">Home</a>
+                <a href="characters.html" class="header_nav_pages_link links-transition">Characters</a>
+                <a href="monstersMysteries.html" class="header_nav_pages_link links-transition">Monsters & Mysteries</a>
+                <a href="behindTheScenes.html" class="header_nav_pages_link links-transition">Behind the Scenes</a>
             </div>
         </nav>
     </header>
     <main class="main">
         <article>
-            <section class="main_hero">
-                <h1 class="main__header header--outline">Behind the Scenes of Stranger Things</h1>
+            <section>
+                <h1 class="main_header">Behind the Scenes of Stranger Things</h1>
             </section>
-            <section class="main__article section__flex_row_desktop">
-                <section>
-                    <h2 class="main_subheader">An Inside Look at the Upside Down</h2>
-                    <div class="bts_image">
-                        <img src="images/btsgif2.gif" alt="Upside Down Scene" />
+            <details>
+                    <summary class="main_subheader">An Inside Look at the Upside Down</summary>
+                    <div class="bts_container2">
+                        <img class="bts_gif" src="images/btsgif2.gif" alt="Upside Down Scene"/>
+                        <p>Dive deep into the eerie and captivating world of the Upside Down with our exclusive behind-the-scenes footage.</p>
+                        <p>Discover how the show's creators brought this parallel dimension to life, from the chilling set designs to the groundbreaking special effects that make the Upside Down feel so real.</p>
                     </div>
-                    <p>Dive deep into the eerie and captivating world of the Upside Down with our exclusive
-                        behind-the-scenes footage.</p>
-                    <p>Discover how the show's creators brought this parallel dimension to life, from the chilling set
-                        designs to the groundbreaking special effects that make the Upside Down feel so real.</p>
+            </details>
+            <details>
+                <summary class="main_subheader">Take a Peek Behind the Scenes of Season 5!</summary>
+                <section class="bts_container">
+                        <p>The first volume of the final season releases on November 26th. Take a peek behind the curtain into the fifth and final installment of the Netflix hit, Stranger Things.</p>
+                        <p>Experience Hawkins like never before, one last time.</p>
+                        <p>Watch the S5 Behind the Scenes here:</p>
+                    </div>
+                    <div class="iframe_container img-fadeIn">
+                        <iframe src="https://www.youtube.com/embed/vEhYTJpC2No?si=TetJ_ge3SEgzzPml" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    </div>
                 </section>
-            </section>
+            </details>
             <section>
-                <h2 class="main_subheader">Take a Peek Behind the Scenes of Season 5!</h2>
-                <p>The first volume of the final season releases on November 26th. Take a peek behind the curtain into
-                    the fifth and final installment of the Netflix hit, Stranger Things.</p>
-                <p>Experience Hawkins like never before, one last time.</p>
-                <p>Watch the S5 Behind the Scenes here:</p>
-                <iframe src="https://www.youtube.com/embed/vEhYTJpC2No?si=TetJ_ge3SEgzzPml" title="YouTube video player"
-                    frameborder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
-                </iframe>
-            </section>
-            <section>
-                <h2 class="bts_subheader">Stranger Things On Set</h2>
+                    <h2 class="main_subheader">Stranger Things On Set</h2>
                 <div class="bts_image_gallery">
-                    <a class="btsgallery1" target="_blank" href="images/BTS1.jpg">
-                        <img class="btsimg1" src="images/BTS1.jpg" alt="Behind the Scenes Photo" width="320px"
-                            height="240px">
+                    <a class="img-fadeIn" target="_blank" href="images/BTS1.jpg">
+                        <img class="btsimg1" src="images/BTS1.jpg" alt="Behind the Scenes Photo" width="320px" height="240px">
                     </a>
-                    <a class="btsgallery2" target="_blank" href="images/BTS2.png">
-                        <img class="btsimg2" src="images/BTS2.png" alt="Behind the Scenes Photo" width="320px"
-                            height="240px">
+                    <a class="img-fadeIn" target="_blank" href="images/BTS2.png">
+                        <img class="btsimg2" src="images/BTS2.png" alt="Behind the Scenes Photo" width="320px" height="240px">
                     </a>
-                    <a class="btsgallery3" target="_blank" href="images/BTS3.png">
-                        <img class="btsimage3" src="images/BTS3.png" alt="Behind the Scenes Photo" width="320px"
-                            height="240px">
+                    <a class="img-fadeIn" target="_blank" href="images/BTS3.png">
+                        <img class="btsimage3" src="images/BTS3.png" alt="Behind the Scenes Photo" width="320px" height="240px">
                     </a>
                 </div>
             </section>
@@ -78,5 +66,4 @@
     </footer>
     <script src="./script.js"></script>
 </body>
-
 </html>
