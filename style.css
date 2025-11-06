@@ -174,7 +174,7 @@
 /* Behind the Scenes Page */
 
 .toggle_header {
-  text-align: left;
+  text-align: center;
   align-items: center;
   background: rgba(16, 24, 32, 0.35);
   border: 1px solid rgba(228, 0, 43, 0.25);
@@ -196,7 +196,7 @@
   cursor: pointer;
 }
 
-.toggle_header::before {
+.toggle_header::after {
   content: '▼';
   margin-right: 60px;
 }
@@ -205,17 +205,13 @@
   list-style-type: none;
 }
 
-.expandable_section[open] .toggle_header::before {
+.expandable_section[open] .toggle_header::after {
   content: '▲';
 }
 
 .expandable_content {
-  justify-content: space-evenly;
+  justify-content: center;
   max-width: 100%;
-}
-
-.bts_image {
-  padding: 30px 10px 30px 10px;
 }
 
 .button {
