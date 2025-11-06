@@ -96,13 +96,9 @@
   font-family: var(--header-fonts);
   text-align: center;
   text-transform: uppercase;
-}
-
-.main__header--characters-page {
   margin-top: 6rem; /* fixes spacing under fixed header */
   font-size: clamp(2.4rem, 5vw, 3.4rem); /* keeps responsive scale */
 }
-
 
 .header--outline {
   text-shadow:
