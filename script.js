@@ -1,14 +1,7 @@
 // ===== Mobile Nav Toggle =====
-function showAndHideClass(className) {
-    const headerNavPages = document.querySelector(className);
-
-    if (headerNavPages) {
-        if (headerNavPages.style.display === 'none' || headerNavPages.style.display === '') {
-            headerNavPages.style.display = 'flex';
-        } else {
-            headerNavPages.style.display = '';
-        }
-    }
+function showAndHideClass() {
+    const headerNavPages = document.querySelector(".header__nav__pages");
+    headerNavPages.classList.toggle("header__nav__pages--open");
 }
 
 // ===== Fade-in on Scroll for Images =====
@@ -19,7 +12,7 @@ document.addEventListener("DOMContentLoaded", () => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
                 entry.target.classList.add('is-visible');
-                observer.unobserve(entry.target); // stops watching once visible
+                observer.unobserve(entry.target);
             }
         });
     }, { threshold: 0.2 });

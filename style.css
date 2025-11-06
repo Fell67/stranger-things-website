@@ -1,22 +1,24 @@
 :root {
-  --primary-color: #101820;
-  --text-color: #FFF7F2;
-  --accent-color: #E4002B;
+  --primary-color: #101820; /** Dark Blue **/
+  --text-color: #FFF7F2; /** White **/
+  --accent-color: #E4002B; /** Red **/
   --header-fonts: Georgia, serif;
   --body-copy-fonts: "Courier New", monospace;
   --header-height: 5rem;
   --footer-height: 1rem;
 }
 
-/* ===== Global ===== */
+/* ===== Global Structure ===== */
 .body {
-  background-color: #101820;
+  background-color: var(--primary-color);
   background-image: url(./images/background.png);
   color: var(--text-color);
   margin: 0;
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+  min-width: min-content;
+  max-width: 100vw;
 }
 
 /* ===== Header ===== */
@@ -28,23 +30,30 @@
   background-color: var(--primary-color);
   border-bottom: 0.3rem solid var(--accent-color);
   display: flex;
-  align-items: center;
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: var(--header-height);
-  z-index: 10;
+  z-index: 1;
 }
 
 .header__nav__logo {
   margin-right: auto;
-  padding-left: 1rem;
+  padding: 1em;
   height: 3rem;
 }
 
 .header__nav__logo__image {
   height: inherit;
+}
+
+.header__nav__pages__link {
+  align-content: center;
+}
+
+.header__nav__link__icon {
+  display: none;
 }
 
 .header__nav__pages {
@@ -59,40 +68,107 @@
   font-size: 1.5rem;
 }
 
-.header__nav__link {
+.header_nav_link_icon {
   display: none;
-  padding: 1rem;
-}
-
-.header__nav__link__icon {
-  width: 2rem;
-  filter: brightness(0) invert(1);
 }
 
 /* ===== Main ===== */
 .main {
-  padding-top: calc(var(--header-height) + 1rem);
   font-family: var(--body-copy-fonts);
 }
 
+.main__hero {
+  height: 30em;
+  background-color: var(--primary-color);
+  background-image: url(./images/forest.jpg);
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.main__header {
+  font-size: 4rem;
+  color: var(--accent-color);
+  font-family: var(--header-fonts);
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.header--outline {
+  text-shadow:
+    -2px -2px 0 var(--primary-color), /* Top-left shadow */
+    2px -2px 0 var(--primary-color),  /* Top-right shadow */
+    -2px 2px 0 var(--primary-color),  /* Bottom-left shadow */
+    2px 2px 0 var(--primary-color);   /* Bottom-right shadow */
+}
+
+.button {
+  background-color: var(--accent-color);
+  border: none;
+  padding: 12px 24px;
+  border-radius: 12px;
+  text-transform: uppercase;
+  color: var(--text-color);
+  text-decoration: none;
+}
+
 .main__article {
-  padding-left: 1.5rem;
-  padding-right: 1.5rem;
+  padding: 1rem;
+}
+
+.main__subheader {
+  font-size: 2rem;
+  color: var(--accent-color);
+  font-family: var(--header-fonts);
+}
+
+.section__flex_row_desktop {
+  display: flex;
+  justify-content: center;
+}
+
+.img--padding_around {
+  padding: 1em;
+}
+
+.img--block {
+  display: block;
+  max-width: 40%;
+  align-self: center;
+  object-fit: cover;
+}
+
+/* ===== Footer ===== */
+.footer {
+  margin-top: auto;
+  background-color: var(--primary-color);
+  text-align: center;
+  text-transform: uppercase;
+  padding: 24px 0;
+  color: var(--text-color);
+  border-top: .3rem solid var(--accent-color);
+  font-family: "Courier New", monospace;
+}
+
+/* ===== Characters Page ===== */
+
+/* === Page Title === */
+.page-title {
+  text-align: center;
+  padding: 3rem 1rem 2rem;
 }
 
 .page-title__heading {
   font-family: var(--header-fonts);
   text-transform: uppercase;
   color: var(--accent-color);
-  font-size: clamp(2rem, 6vw, 3rem);
-  margin-top: 3rem;
-  margin-bottom: 2rem;
-  text-align: center;
-  width: 100%;
-  display: block;
+  font-size: clamp(2.4rem, 5vw, 3.4rem);
 }
 
-/* ===== Section Titles ===== */
+/* === Section Dividers === */
 .characters-group {
   margin-top: 3rem;
 }
@@ -107,7 +183,7 @@
   padding-left: 0.75rem;
 }
 
-/* ===== Profile Cards ===== */
+/* === Character Rows === */
 .profile-card {
   display: flex;
   gap: 2rem;
@@ -122,18 +198,7 @@
   transition: transform 0.25s ease, border 0.25s ease, box-shadow 0.25s ease;
 }
 
-.profile-card:hover {
-  transform: scale(1.03);
-  border-color: var(--accent-color);
-  box-shadow: 0 0 15px 3px rgba(228, 0, 43, 0.55);
-  cursor: pointer;
-}
-
-.profile-card--reverse {
-  flex-direction: row-reverse;
-}
-
-/* Profile Images */
+/* Image Box */
 .profile-card__image {
   width: 200px;
   height: 200px;
@@ -142,21 +207,44 @@
   border: 2px solid rgba(255, 247, 242, 0.85);
 }
 
+/* Villains (fixed to show tint + image) */
 .profile-card__image--villain {
   border-color: var(--accent-color);
   filter: drop-shadow(0 0 12px rgba(228, 0, 43, 0.55));
 }
 
-/* Text */
-.profile-card__text {
-  flex: 1;
+/* Hover Interaction + Red Glow */
+.profile-card:hover {
+  transform: scale(1.03);
+  background: rgba(16, 24, 32, 0.35);
+  border-color: var(--accent-color);
+  box-shadow: 0 0 15px 3px rgba(228, 0, 43, 0.55);
+  cursor: pointer;
+  position: relative;
 }
 
+/* Alternate Sides */
+.profile-card--reverse {
+  flex-direction: row-reverse;
+}
+
+/* Text Alignment */
+.profile-card__text {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* Name & Role */
 .profile-card__name {
   font-family: var(--header-fonts);
   font-size: 1.7rem;
   text-transform: uppercase;
+  margin-bottom: 0.3rem;
   color: var(--accent-color);
+  letter-spacing: 0.03em;
+  text-shadow: 0 0 4px rgba(228, 0, 43, 0.45);
 }
 
 .profile-card__role {
@@ -164,82 +252,93 @@
   font-size: 0.95rem;
   font-style: italic;
   color: var(--accent-color);
-  opacity: 0.9;
   margin-bottom: 1.2rem;
+  opacity: 0.9;
 }
 
+/* Bio */
 .profile-card__bio {
   font-family: var(--body-copy-fonts);
   opacity: 0.9;
   line-height: 1.5;
 }
 
-/* Button */
-.button {
-  background-color: var(--accent-color);
-  padding: 12px 24px;
-  border-radius: 12px;
-  text-transform: uppercase;
-  color: var(--text-color);
-  text-decoration: none;
-  display: block;
-  width: max-content;
-  margin: 3rem auto 5rem;
+
+/* Transitions and Animations */
+.img--fade_in {
+  animation-name: imageFadeIn;
+  animation-duration: 5s;
 }
 
-/* Footer */
-.footer {
-  margin-top: auto;
-  background-color: var(--primary-color);
-  text-align: center;
-  text-transform: uppercase;
-  padding: 24px 0;
-  color: var(--text-color);
-  border-top: .3rem solid var(--accent-color);
+@keyframes imageFadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
 }
 
-/* ===== Mobile ===== */
-@media (max-width: 768px) {
+.links--transition {
+  transition: all 1s;
+}
 
-  .header__nav__link {
-    display: block;
+.links--transition:hover {
+  color: var(--accent-color);
+  text-decoration: underline;
+}
+
+/* tablet and mobile site */
+@media screen and (max-width: 1255px) {
+  .header__nav {
+    text-align: center;
+    flex-wrap: wrap;
+  }
+
+  .header__nav__logo {
+    padding-bottom: 3%;
+  }
+
+  .header__nav__link__icon {
+    display: inline;
+    padding: 1em;
+    height: 2.5rem;
   }
 
   .header__nav__pages {
-    display: none;
     flex-direction: column;
-    position: absolute;
-    top: var(--header-height);
-    left: 0;
+    text-align: center;
+    flex-basis: 100%;
+    display: none;
+    position: fixed;
+    top: calc(var(--header-height) + .2rem);
     width: 100%;
     background-color: var(--primary-color);
-    border-bottom: .3rem solid var(--accent-color);
-    padding: 1.25rem 0;
-    text-align: center;
-    gap: 1.25rem;
+    border-bottom: 0.25rem solid var(--accent-color);
   }
 
-  .header__nav__pages__link {
-    font-size: 1.25rem;
+  .button {
+    font-size: x-large;
   }
 
+  .section__flex_row_desktop {
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+
+  .img--block {
+    max-width: 90%;
+  }
+}
+
+/* === Mobile === */
+@media (max-width: 768px) {
   .profile-card,
   .profile-card--reverse {
     flex-direction: column;
     text-align: center;
-    gap: 0.75rem;
-    padding: 1rem 0.75rem;
   }
 
   .profile-card__image {
     width: 60%;
     max-width: 200px;
     height: auto;
-  }
-
-  .profile-card__bio {
-    max-width: 85%;
-    margin: 0 auto;
   }
 
   .button {
