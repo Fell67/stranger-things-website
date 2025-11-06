@@ -1,35 +1,88 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Learn more about the TV show Stranger Things and watch it on Netflix">
     <title>Stranger Things</title>
-    <link rel="shortcut icon" href="./images/Stranger_Things_logo.svg">
-    <link rel="stylesheet" href="style.css">
-</head>
-<body class="body">
+    <link rel="shortcut icon" href="./images/Stranger_Things_logo.svg" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body class="body">
     <header class="header">
-        <nav class="header_nav">
-            <a href="index.html" class="header_nav_logo"><img src="./images/Stranger_Things_logo.svg" class="header_nav_logo_image" alt="Stranger Things Logo"/></a>
-            <a onclick="showAndHideClass('.header_nav_pages')" class="header_nav_link"><img src="images/List-Menu.svg" alt="List Menu" class="header_nav_link_icon"/></a>
-            <div class="header_nav_pages">
-                <a href="index.html" class="header_nav_pages_link links-transition">Home</a>
-                <a href="characters.html" class="header_nav_pages_link links-transition">Characters</a>
-                <a href="monstersMysteries.html" class="header_nav_pages_link links-transition">Monsters & Mysteries</a>
-                <a href="behindTheScenes.html" class="header_nav_pages_link links-transition">Behind the Scenes</a>
-            </div>
-        </nav>
+      <nav class="header__nav">
+        <a href="index.html" class="header__nav__logo"
+          ><img
+            src="./images/Stranger_Things_logo.svg"
+            class="header__nav__logo__image"
+            alt="Stranger Things Logo"
+        /></a>
+        <a
+          onclick="showAndHideClass('.header__nav__pages')"
+          class="header__nav_link"
+          ><img
+            src="images/List-Menu.svg"
+            alt="List Menu"
+            class="header__nav__link__icon"
+        /></a>
+        <div class="header__nav__pages">
+          <a href="index.html" class="header__nav__pages__link links--transition"
+            >Home</a
+          >
+          <a
+            href="characters.html"
+            class="header__nav__pages__link links--transition"
+            >Characters</a
+          >
+          <a
+            href="monstersMysteries.html"
+            class="header__nav__pages__link links--transition"
+            >Monsters & Mysteries</a
+          >
+          <a
+            href="behindTheScenes.html"
+            class="header__nav__pages__link links--transition"
+            >Behind the Scenes</a
+          >
+        </div>
+      </nav>
     </header>
     <main class="main">
-        <h1 class="main_header">Main Content</h1>
-        <h2 class="main_subheader">Subheader</h2>
-        <p>I am main content of the home page</p>
-        <img src="./images/forest.jpg"  height="500px" class="img-fadeIn" alt="Forest"/>
-        <img src="./images/forest.jpg"  height="500px" class="img-fadeIn" alt="Forest"/>
+      <article>
+        <section class="main__hero">
+          <h1 class="main__header header--outline">Welcome to Hawkins</h1>
+          <a
+            class="button"
+            href="https://www.netflix.com/title/80057281?source=35&fromWatch=true"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Watch on Netflix
+          </a>
+        </section>
+        <section class="main__article section__flex_row_desktop">
+          <section>
+            <h2 class="main__subheader">About the Series</h2>
+            <p><strong>Genre:</strong> Science fiction, Horror, Mystery, Drama</p> 
+            <p><strong>Setting:</strong> 1980s Hawkins, Indiana</p>
+            <p><strong>Core Themes:</strong></p>
+            <ul>
+                <li><strong>Friendship and loyalty:</strong> The basis of the show is the friendship between the main characters and them working together to overcome challenges.</li>
+                <li><strong>Family:</strong> The show has examples of several forms of family. From family that shares blood to family created by the group of friends.</li>
+                <li><strong>Love:</strong> Different types of love are exhibited in the show, including romantic love, familial love, and the platonic love between friends. </li>
+                <li><strong>Good vs. Evil:</strong> The main characters constantly fight against supernatural threats and human antagonists.</li>
+                <li><strong>Courage and resilience:</strong> Characters repeatedly face their fears and persevere through traumatic events.</li>
+            </ul>
+          </section>
+          <img
+            src="./images/hawkins.png"
+            class="img--fade_in img--padding_around img--block"
+            alt="The town of Hawkins"
+          />
+        </section>
+      </article>
     </main>
-    <footer class="footer">
-        &copy; 2025
-    </footer>
+    <footer class="footer">&copy; 2025</footer>
     <script src="./script.js"></script>
-</body>
+  </body>
 </html>

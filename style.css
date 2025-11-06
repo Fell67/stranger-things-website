@@ -68,7 +68,6 @@
 
 .main {
   font-family: "Courier New", monospace;
-  padding-top: 6rem;
 }
 
 .main__hero {
@@ -144,33 +143,7 @@
   color: var(--text-color);
   border-top: .3rem solid var(--accent-color);
   font-family: "Courier New", monospace;
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-
 }
-
-/* Transitions and Animations */
-.img--fade_in {
-  animation-name: imageFadeIn;
-  animation-duration: 5s;
-}
-
-@keyframes imageFadeIn {
-  0%   {opacity: 0;}
-  100% {opacity: 1;}
-}
-
-.links--transition {
-  transition: all 1s;
-}
-
-.links--transition:hover {
-  color: var(--accent-color);
-  text-decoration: underline;
-}
-
 
 /* Monstes and Mysteries (Katie) Additional Styling*/
 
@@ -284,6 +257,27 @@
   margin-bottom: 100px;
   margin-right: 50px;
 }
+
+/* Transitions and Animations */
+.img--fade_in {
+  animation-name: imageFadeIn;
+  animation-duration: 5s;
+}
+
+@keyframes imageFadeIn {
+  0%   {opacity: 0;}
+  100% {opacity: 1;}
+}
+
+.links--transition {
+  transition: all 1s;
+}
+
+.links--transition:hover {
+  color: var(--accent-color);
+  text-decoration: underline;
+}
+
 
 /* tablet and mobile site */
 @media screen and (max-width: 1255px) {
