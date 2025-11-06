@@ -74,7 +74,7 @@
 
 /* ===== Main ===== */
 .main {
-  font-family: var(--body-copy-fonts);
+  padding-top: var(--header-height);
 }
 
 .main__hero {
@@ -113,6 +113,9 @@
   text-transform: uppercase;
   color: var(--text-color);
   text-decoration: none;
+  display: block;
+  margin: 0 auto;
+  width: fit-content;
 }
 
 .main__article {
@@ -156,16 +159,14 @@
 /* ===== Characters Page ===== */
 
 /* === Page Title === */
-.page-title {
-  text-align: center;
-  padding: 3rem 1rem 2rem;
-}
 
 .page-title__heading {
   font-family: var(--header-fonts);
+  text-align: center;
   text-transform: uppercase;
   color: var(--accent-color);
   font-size: clamp(2.4rem, 5vw, 3.4rem);
+  margin-top: 7rem;
 }
 
 /* === Section Dividers === */
@@ -342,8 +343,11 @@
   }
 
   .button {
-    margin: 2rem auto 3rem;
-    padding: 8px 16px;
-    font-size: 0.85rem;
+  margin: 2rem auto 3rem;
+  padding: 12px 24px;
+  font-size: 1.5rem;
+  display: block;
+  text-align: center;
+  width: fit-content;
   }
 }
