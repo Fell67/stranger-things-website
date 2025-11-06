@@ -180,15 +180,6 @@
   margin: 2rem auto;
 }
 
-/* Shared Subheader Styling */
-.main_subheader {
-  font-size: 2rem;
-  color: var(--accent-color, #ff3b3b);
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  margin-bottom: 1.5rem;
-}
-
 /* Monster Grid Layout */
 .gallery__grid {
   display: flex;
@@ -200,10 +191,10 @@
 }
 
 /* Monster Cards */
-.monster-card {
+.gallery__card {
   flex: 1 1 250px;
   max-width: auto;
-  background: rgba(128, 128, 128, 0.15); /* transparent grey background */
+  background: rgba(34, 34, 34, 0.15); /* transparent grey background */
   border: 1px solid rgba(255, 0, 0, 0.7);
   border-radius: 8px;
   padding: 1rem;
@@ -216,42 +207,45 @@
 }
 
 /* Glow on Hover */
-.monster-card:hover {
+.gallery__card:hover {
   box-shadow: 0 0 20px rgba(255, 0, 0, 0.8);
   transform: translateY(-4px);
 }
 
 /* Monster Images */
-.monster-card img {
+.gallery__card__img {
   width: 100%;
+  max-width: 500px;
   height: auto;
-  border-radius: 6px;
+  border-radius: 8px;
+  border: 1px solid rgba(255, 0, 0, 0.6);
+  box-shadow: 0 0 12px rgba(255, 0, 0, 0.2);
   margin-bottom: 1rem;
   object-fit: cover;
   align-self: flex-start; /* ensure image stays at top */
 }
 
 /* Monster Text */
-.monster-card h3 {
+.gallery__card h3 {
   font-size: 2rem;
   margin: 0.5rem 0;
   color: #E4002B;
 }
 
-.monster-card p {
+.gallery__card p {
   color: #ddd;
-  font-size: rem;
+  font-size: 1rem;
   line-height: 1.4;
 }
 
 /* Science Section */
-.science-section {
+.science {
   text-align: center;
   margin: 3rem auto;
   max-width: auto;
 }
 
-.science-section .main_subheader {
+.science .main_subheader {
   font-size: 2rem;
   color: var(--accent-color, #ff3b3b);
   text-transform: uppercase;
@@ -267,7 +261,7 @@
   margin-top: 1rem;
 }
 
-.science-image {
+.science__image {
   width: 100%;
   max-width: 760px;
   border-radius: 8px;
@@ -278,7 +272,7 @@
 }
 
 /* Text box - right side on desktop */
-.science-box {
+.science__box {
   width: 1000px;
   background: rgba(255, 255, 255, 0.05);
   border: 1px solid rgba(255, 0, 0, 0.6);
@@ -334,29 +328,29 @@
   }
 
   /* Monsters & Mysteries Media Query Section*/
-  .monster-grid {
+  .gallery__grid {
     flex-direction: column;
     align-items: center;
   }
 
-  .monster-card {
+  .gallery__card {
     max-width: auto;
   }
 
-  .science-content {
+  .science__content {
     flex-direction: column;
     align-items: center;
     justify-content: center;
   }
 
-  .science-box {
+  .science__box {
     width: 90%;
     margin-left: 10px;
     margin-right: 10px;
     padding: 10px;
   }
 
-  .science-image{
+  .science__image {
     width: 100%;
     margin-right: 50px;
     margin-bottom: 5px;
