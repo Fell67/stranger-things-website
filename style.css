@@ -169,7 +169,6 @@
 /* Monster Grid Layout */
 .gallery__grid {
   display: flex;
-  
   justify-content: center;
   text-align: center;
   gap: 1.5rem;
@@ -210,13 +209,15 @@
 }
 
 /* Monster Text */
-.gallery__card h3 {
+.gallery__card__h3 {
+  font-family: var(--header-fonts);
   font-size: 2rem;
   margin: 0.5rem 0;
   color: #E4002B;
+  text-transform: uppercase;
 }
 
-.gallery__card p {
+.gallery__card__p {
   color: #ddd;
   font-size: 1rem;
   line-height: 1.4;
