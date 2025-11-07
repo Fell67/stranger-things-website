@@ -5,6 +5,9 @@
   /** White **/
   --accent-color: #E4002B;
   /** Red **/
+  --border-color: rgba(228, 0, 43, 0.25);
+  /** Dark Red **/
+
   --header-fonts: Georgia, serif;
   --body-copy-fonts: "Courier New", monospace;
   --header-height: 5rem;
@@ -84,7 +87,7 @@
 /* ===== Main ===== */
 .main {
   padding-top: var(--header-height);
-  font-family: "Courier New", monospace;
+  font-family: var(--body-copy-fonts);
 }
 
 .main__hero {
@@ -107,6 +110,15 @@
   text-transform: uppercase;
   margin-top: 6rem; /* fixes spacing under fixed header */
   font-size: clamp(2.4rem, 5vw, 3.4rem); /* keeps responsive scale */
+}
+
+.page-title__heading {
+font-family: var(--header-fonts);
+text-align: center;
+text-transform: uppercase;
+color: var(--accent-color);
+font-size: clamp(2.4rem, 5vw, 3.4rem);
+margin-top: 7rem;
 }
 
 .header--outline {
@@ -164,6 +176,91 @@
   object-fit: cover;
 }
 
+/* === Section Dividers === */
+.characters-group {
+  margin-top: 3rem;
+}
+
+/* === Character Rows === */
+.profile-card {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+  justify-content: flex-start;
+  margin-bottom: 2rem;
+  background: rgba(16, 24, 32, 0.35);
+  border: 1px solid rgba(228, 0, 43, 0.25);
+  border-radius: 1rem;
+  padding: 1.8rem 2rem;
+  backdrop-filter: blur(2px);
+  transition: transform 0.25s ease, border 0.25s ease, box-shadow 0.25s ease;
+}
+
+/* Image Box */
+.profile-card__image {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: .6rem;
+  border: 2px solid rgba(255, 247, 242, 0.85);
+}
+
+/* Villains (fixed to show tint + image) */
+.profile-card__image--villain {
+  border-color: var(--accent-color);
+  filter: drop-shadow(0 0 12px rgba(228, 0, 43, 0.55));
+}
+
+/* Hover Interaction + Red Glow */
+.profile-card:hover {
+  transform: scale(1.03);
+  background: rgba(16, 24, 32, 0.35);
+  border-color: var(--accent-color);
+  box-shadow: 0 0 15px 3px rgba(228, 0, 43, 0.55);
+  cursor: pointer;
+  position: relative;
+}
+
+/* Alternate Sides */
+.profile-card--reverse {
+  flex-direction: row-reverse;
+}
+
+/* Text Alignment */
+.profile-card__text {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* Name & Role */
+.profile-card__name {
+  font-family: var(--header-fonts);
+  font-size: 1.7rem;
+  text-transform: uppercase;
+  margin-bottom: 0.3rem;
+  color: var(--accent-color);
+  letter-spacing: 0.03em;
+  text-shadow: 0 0 4px rgba(228, 0, 43, 0.45);
+}
+
+.profile-card__role {
+  font-family: var(--header-fonts);
+  font-size: 0.95rem;
+  font-style: italic;
+  color: var(--accent-color);
+  margin-bottom: 1.2rem;
+  opacity: 0.9;
+}
+
+/* Bio */
+.profile-card__bio {
+  font-family: var(--body-copy-fonts);
+  opacity: 0.9;
+  line-height: 1.5;
+}
+
 /* ===== Footer ===== */
 .footer {
   margin-top: auto;
@@ -173,21 +270,21 @@
   padding: 24px 0;
   color: var(--text-color);
   border-top: .3rem solid var(--accent-color);
-  font-family: "Courier New", monospace;
+  font-family: var(--body-copy-fonts);
 }
 
 /* Behind the Scenes Page */
 
 .main__header--padding {
   margin-top: 20px;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
 }
 
 
 .main__subheader--border {
   align-items: center;
   background: rgba(16, 24, 32, 0.35);
-  border: 3px solid rgba(228, 0, 43, 0.25);
+  border: 3px solid var(--text-color);
   border-radius: 1rem;
   padding: 1.8rem 2rem;
   backdrop-filter: blur(2px);
@@ -199,7 +296,7 @@
 .main__subheader--border:hover {
   transform: scale(1.01);
   border-color: var(--accent-color);
-  box-shadow: 0 0 15px 3px rgba(228, 0, 43, 0.55);
+  box-shadow: 0 0 15px 3px var(--border-color);
   cursor: pointer;
 }
 
@@ -211,6 +308,10 @@
 
 .summary--remove_marker {
   list-style-type: none;
+}
+
+.expandable_section {
+  margin-top: 20px
 }
 
 .expandable_section[open] .main__subheader--border::after {
@@ -251,15 +352,8 @@
 .iframe--format:hover, .img--format:hover {
   transform: scale(1.03);
   border-color: var(--accent-color);
-  box-shadow: 0 0 15px 3px rgba(228, 0, 43, 0.55);
+  box-shadow: 0 0 15px 3px var(--border-color);
   cursor: pointer;
-}
-
-.hr--divider {
-  border: none; 
-  border-top: 2px dashed var(--text-color); 
-  margin: 0px 150px 20px 150px; 
-  box-shadow: 4px 4px 8px var(--accent-color);
 }
 
 .button {
