@@ -138,6 +138,7 @@
 .section__flex_row_desktop {
   display: flex;
   justify-content: center;
+  gap: 2rem;
 }
 
 .img--padding_around {
@@ -187,6 +188,7 @@
   flex-direction: column;
   max-width: 1840px;
   margin-top: 2rem;
+  padding: 1rem;
 }
 
 /* Monster Grid Layout */
@@ -259,6 +261,13 @@
 
 /* TO-DO: Update the following classes so that on characters images are square and in monsters images are rectangle */
 
+/* Header padding adjustment from BTS */
+.main__header--padding {
+  margin-top: 20px;
+  margin-bottom: 30px;
+}
+
+
 /* Villains (fixed to show tint + image) */
 .profile-card__image--villain {
   border-color: var(--accent-color);
@@ -277,7 +286,7 @@
 .gallery__card__p {
   color: #ddd;
   font-size: 1rem;
-  line-height: 1.4;
+  line-height: 1.5;
 }
 
 /* Caption-style text (taken from character's CSS) and altered*/
@@ -293,7 +302,7 @@
 
 /* Science Section */
 .science {
-  margin: 3rem auto;
+  margin: 3rem 1rem;
   max-width: 1840px;
 }
 
@@ -314,28 +323,15 @@
 }
 
 .science__image {
-  width: 100%;
-  max-width: 760px;
+  width: 40%;
   border-radius: 8px;
   border: 1px solid rgba(255, 0, 0, 0.6);
   box-shadow: 0 0 12px rgba(255, 0, 0, 0.2);
-  margin-left: 50px;
 }
 
-/* Text box - right side on desktop */
-.science__box {
-  width: 1000px;
-  background: rgba(16, 24, 32, 0.35);
-  backdrop-filter: blur(2px);
-  border: 1px solid rgba(255, 0, 0, 0.7);
-  border-radius: 8px;
-  padding: 4.13rem;
-  color: #eee;
-  line-height: 1.6;
-  text-align: left;
-  margin-bottom: 100px;
-  margin-right: 50px;
-  border-color: var(--accent-color);
+/* Adds Spacing to paragraph text to be similar to spacing in cards. ASK IF WANTED TO MAKE UNIVERSAL <p> CLASS */
+.science__content__p {
+  line-height: 1.5;
 }
 /* Hover Interaction + Red Glow */
 .profile-card:hover {
@@ -463,12 +459,12 @@
   }
 
   .gallery__card {
-    max-width: 70%;
+    width: 90%;
   }
 
   .science {
     align-items: center;
-    max-width: 70%;
+    max-width: 90%;
   }
   .science__content {
     flex-direction: column;
@@ -477,9 +473,7 @@
   }
 
   .science__image {
-    width: 80%;
-    margin-right: 50px;
-    margin-bottom: 5px;
+    width: 100%;
   }
 
 }
