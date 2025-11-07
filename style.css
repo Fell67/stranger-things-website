@@ -177,15 +177,17 @@
 .gallery__card {
   flex: 1 1 250px;
   max-width: auto;
-  background: rgba(34, 34, 34, 0.15); /* transparent grey background */
+  background: rgba(16, 24, 32, 0.35);
   border: 1px solid rgba(255, 0, 0, 0.7);
-  border-radius: 8px;
-  padding: 1rem;
+  border-radius: 1rem;
+  padding: 1.8rem 2rem;
   text-align: center;
+  align-items: center;
   display: flex;
   flex-direction: column; /* ensures image, title, text flow top-down */
   align-items: center; /* horizontally center content */
   justify-content: flex-start; /* top align content */
+  backdrop-filter: blur(2px);
   transition: box-shadow 0.3s ease, transform 0.3s ease;
 }
 
@@ -270,8 +272,9 @@
 /* Text box - right side on desktop */
 .science__box {
   width: 1000px;
-  background: rgba(255, 255, 255, 0.05);
-  border: 1px solid rgba(255, 0, 0, 0.6);
+  background: rgba(16, 24, 32, 0.35);
+  backdrop-filter: blur(2px);
+  border: 1px solid rgba(255, 0, 0, 0.7);
   border-radius: 8px;
   padding: 4.13rem;
   color: #eee;
@@ -279,6 +282,7 @@
   text-align: left;
   margin-bottom: 100px;
   margin-right: 50px;
+  border-color: var(--accent-color);
 }
 
 /* Transitions and Animations */
@@ -348,10 +352,11 @@
   .gallery__grid {
     flex-direction: column;
     align-items: center;
+    max-width: 70%;
   }
 
   .gallery__card {
-    max-width: auto;
+    max-width: 70%;
   }
 
   .science__content {
@@ -361,14 +366,14 @@
   }
 
   .science__box {
-    width: 90%;
+    width: 75%;
     margin-left: 10px;
     margin-right: 10px;
     padding: 10px;
   }
 
   .science__image {
-    width: 100%;
+    width: 70%;
     margin-right: 50px;
     margin-bottom: 5px;
   }
