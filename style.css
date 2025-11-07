@@ -161,13 +161,17 @@
 .gallery {
   text-align: center;
   margin: 2rem auto;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
 }
 
 /* Monster Grid Layout */
 .gallery__grid {
   display: flex;
-  flex-wrap: wrap;
+  
   justify-content: center;
+  text-align: center;
   gap: 1.5rem;
   margin-right: 50px;
   margin-left: 50px;
@@ -176,17 +180,14 @@
 /* Monster Cards */
 .gallery__card {
   flex: 1 1 250px;
-  max-width: auto;
   background: rgba(16, 24, 32, 0.35);
   border: 1px solid rgba(255, 0, 0, 0.7);
   border-radius: 1rem;
   padding: 1.8rem 2rem;
   text-align: center;
-  align-items: center;
   display: flex;
   flex-direction: column; /* ensures image, title, text flow top-down */
   align-items: center; /* horizontally center content */
-  justify-content: flex-start; /* top align content */
   backdrop-filter: blur(2px);
   transition: box-shadow 0.3s ease, transform 0.3s ease;
 }
