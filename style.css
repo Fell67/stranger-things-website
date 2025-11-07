@@ -215,7 +215,6 @@
 .iframe--format, .gif--format {
   overflow: auto;
   min-width: 50%;
-  min-height: 400px;
   border-radius: .6rem;
   border: 2px solid rgba(255, 247, 242, 0.85);
   margin-bottom: 20px;
@@ -239,9 +238,9 @@
 
 .hr--divider {
   border: none; 
-  border-top: 1px dashed var(--text-color); 
-  margin: 0px 50px 20px 50px; 
-  box-shadow: 4px 4px 10px var(--accent-color);
+  border-top: 2px dashed var(--text-color); 
+  margin: 0px 150px 20px 150px; 
+  box-shadow: 4px 4px 8px var(--accent-color);
 }
 
 .button {
@@ -311,12 +310,12 @@
     max-width: 90%;
   }
 
-  .toggle_header {
+  .main__subheader--border {
     max-width: 100%;
     text-align: center;
   }
 
-  .toggle_header::after {
+  .main__subheader--border::after {
     display: block;
     text-align: center;
     float: none;
