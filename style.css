@@ -179,7 +179,8 @@
 /* Behind the Scenes Page */
 
 .main__header--padding {
-  padding: 80px 0 0 0;
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
 
 
