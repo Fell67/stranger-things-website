@@ -11,8 +11,9 @@
   --footer-height: 1rem;
 }
 
+/* ===== Global Structure ===== */
 .body {
-  background-color: #101820;
+  background-color: var(--primary-color);
   background-image: url(./images/background.png);
   color: var(--text-color);
   margin: 0;
@@ -29,13 +30,14 @@
   justify-content: center;
 }
 
+/* ===== Header ===== */
 .header {
   font-family: var(--body-copy-fonts);
 }
 
 .header__nav {
   background-color: var(--primary-color);
-  border-bottom: .3rem solid var(--accent-color);
+  border-bottom: 0.3rem solid var(--accent-color);
   display: flex;
   position: fixed;
   top: 0;
@@ -75,7 +77,13 @@
   font-size: 1.5rem;
 }
 
+.header_nav_link_icon {
+  display: none;
+}
+
+/* ===== Main ===== */
 .main {
+  padding-top: var(--header-height);
   font-family: "Courier New", monospace;
 }
 
@@ -97,6 +105,8 @@
   font-family: var(--header-fonts);
   text-align: center;
   text-transform: uppercase;
+  margin-top: 6rem; /* fixes spacing under fixed header */
+  font-size: clamp(2.4rem, 5vw, 3.4rem); /* keeps responsive scale */
 }
 
 .header--outline {
@@ -119,6 +129,9 @@
   text-transform: uppercase;
   color: var(--text-color);
   text-decoration: none;
+  display: block;
+  margin: 0 auto;
+  width: fit-content;
 }
 
 .main__article {
@@ -126,9 +139,13 @@
 }
 
 .main__subheader {
-  font-size: 2rem;
-  color: var(--accent-color);
   font-family: var(--header-fonts);
+  font-size: 1.4rem;
+  text-transform: uppercase;
+  color: var(--accent-color);
+  margin-bottom: 1.5rem;
+  border-left: 4px solid var(--accent-color);
+  padding-left: 0.75rem;
 }
 
 .section__flex_row_desktop {
@@ -147,6 +164,7 @@
   object-fit: cover;
 }
 
+/* ===== Footer ===== */
 .footer {
   margin-top: auto;
   background-color: var(--primary-color);
@@ -254,13 +272,8 @@
 }
 
 @keyframes imageFadeIn {
-  0% {
-    opacity: 0;
-  }
-
-  100% {
-    opacity: 1;
-  }
+  0%   {opacity: 0;}
+  100% {opacity: 1;}
 }
 
 .links--transition {
@@ -298,7 +311,7 @@
     top: calc(var(--header-height) + .2rem);
     width: 100%;
     background-color: var(--primary-color);
-    border-bottom: .25rem solid var(--accent-color);
+    border-bottom: 0.25rem solid var(--accent-color);
   }
 
   .section__flex_row_desktop {
@@ -328,5 +341,29 @@
     justify-content: center;
     align-items: center;
     padding: 0;
+  }
+}
+
+/* === Mobile === */
+@media (max-width: 768px) {
+  .profile-card,
+  .profile-card--reverse {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .profile-card__image {
+    width: 60%;
+    max-width: 200px;
+    height: auto;
+  }
+
+  .button {
+    margin: 2rem auto 3rem;
+    padding: 12px 24px;
+    font-size: 1.5rem;
+   display: block;
+    text-align: center;
+    width: fit-content;
   }
 }
