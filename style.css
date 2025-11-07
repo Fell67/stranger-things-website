@@ -145,7 +145,17 @@
   font-family: "Courier New", monospace;
 }
 
-/* Monstes and Mysteries (Katie) Additional Styling*/
+/* Monsters and Mysteries (Katie) Additional Styling*/
+
+/* Title Heading (Borrowed from Savvanah's  Characters page)*/
+.page-title__heading {
+  font-family: var(--header-fonts);
+  text-align: center;
+  text-transform: uppercase;
+  color: var(--accent-color);
+  font-size: 5rem; /*Altered from Original from characters CSS => clamp(2.4rem, 5vw, 3.4rem) */
+  margin-top: 8rem;
+}
 
 /* Monster Gallery Section */
 .gallery {
@@ -196,6 +206,8 @@
   margin-bottom: 1rem;
   object-fit: cover;
   align-self: flex-start; /* ensure image stays at top */
+  border-color: var(--accent-color);
+  filter: drop-shadow(0 0 12px rgba(228, 0, 43, 0.55));
 }
 
 /* Monster Text */
@@ -210,6 +222,17 @@
   font-size: 1rem;
   line-height: 1.4;
 }
+
+/* Caption-style text (taken from character's CSS) and altered*/
+.gallery__card__role {
+  font-family: var(--header-fonts);
+  font-size: 0.95rem;
+  font-style: italic;
+  color: #E4002B;
+  margin-bottom: 1rem;
+  opacity: 0.9;
+}
+
 
 /* Science Section */
 .science {
