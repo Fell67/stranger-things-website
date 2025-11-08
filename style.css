@@ -164,9 +164,9 @@
   font-family: "Courier New", monospace;
 }
 
-/* Monsters and Mysteries (Katie) Additional Styling*/
+/* Monsters and Mysteries Additional Styling*/
 
-/* Title Heading (Borrowed from Savvanah's  Characters page)*/
+/* Title Heading */
 /* ===== Characters Page ===== */
 
 /* === Page Title === */
@@ -259,8 +259,6 @@
   border: 2px solid rgba(255, 247, 242, 0.85);
 }
 
-/* TO-DO: Update the following classes so that on characters images are square and in monsters images are rectangle */
-
 /* Header padding adjustment from BTS */
 .main__header--padding {
   margin-top: 20px;
@@ -298,7 +296,7 @@
   line-height: 1.5;
 }
 
-/* Caption-style text (taken from character's CSS) and altered*/
+/* Caption-style text */
 .gallery__card__role {
   font-family: var(--header-fonts);
   font-size: 0.95rem;
@@ -342,6 +340,7 @@
 .science__content__p {
   line-height: 1.5;
 }
+
 /* Hover Interaction + Red Glow */
 .profile-card:hover {
   transform: scale(1.03);
