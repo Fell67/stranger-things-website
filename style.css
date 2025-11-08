@@ -274,6 +274,15 @@
   filter: drop-shadow(0 0 12px rgba(228, 0, 43, 0.55));
 }
 
+/* Modified profile-card__image--villain class exclusive to monsters page to fix shape, size, and mobile responsiveness*/
+.profile-card__image--villain--monster {
+  border-color: var(--accent-color);
+  filter: drop-shadow(0 0 12px rgba(228, 0, 43, 0.55));
+  width: 400px;
+  max-width: 100%;
+  margin-bottom: 1rem;
+}
+
 /* Monster Text */
 .gallery__card__h3 {
   font-family: var(--header-fonts);
@@ -455,7 +464,7 @@
   .gallery__grid {
     flex-direction: column;
     align-items: center;
-    max-width: 70%;
+    max-width: 90%;
   }
 
   .gallery__card {
@@ -499,5 +508,12 @@
     display: block;
     text-align: center;
     width: fit-content;
+  }
+
+  .profile-card__image--villain--monster {
+    border-color: var(--accent-color);
+    filter: drop-shadow(0 0 12px rgba(228, 0, 43, 0.55));
+    width: 400px;
+    max-width: 100%;
   }
 }
