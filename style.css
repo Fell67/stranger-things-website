@@ -5,8 +5,11 @@
   /** White **/
   --accent-color: #E4002B;
   /** Red **/
-  --border-color: rgba(228, 0, 43, 0.25);
+  --border-color: rgba(228, 0, 43, 0.25); 
   /** Dark Red **/
+  --glow-color: rgba(228, 0, 43, 0.55);
+  /** Bright Red **/
+
 
   --header-fonts: Georgia, serif;
   --body-copy-fonts: "Courier New", monospace;
@@ -142,6 +145,7 @@ margin-top: 7rem;
 
 .main__article {
   padding: 1rem;
+  line-height: 1.5;
 }
 
 .main__subheader {
@@ -162,6 +166,10 @@ margin-top: 7rem;
 
 .img--padding_around {
   padding: 1em;
+}
+
+.img--margin_around {
+  margin: 1em;
 }
 
 .img--block {
@@ -220,33 +228,10 @@ margin-top: 7rem;
 }
 
 /* Monster Cards */
-.gallery__card {
+.profile-card__horizontal {
   flex: 1 1 250px;
-  background: rgba(16, 24, 32, 0.35);
-  border: 1px solid rgba(255, 0, 0, 0.7);
-  border-radius: 1rem;
-  padding: 1.8rem 2rem;
   text-align: center;
-  display: flex;
   flex-direction: column; /* ensures image, title, text flow top-down */
-  align-items: center; /* horizontally center content */
-  backdrop-filter: blur(2px);
-  transition: box-shadow 0.3s ease, transform 0.3s ease;
-}
-
-/* Glow on Hover */
-.gallery__card:hover {
-  box-shadow: 0 0 20px rgba(255, 0, 0, 0.8);
-  transform: translateY(-4px);
-}
-
-/* Monster Images */
-.gallery__card__img {
-  width: 100%;
-  border-radius: 8px;
-  border: 1px solid rgba(255, 0, 0, 0.6);
-  box-shadow: 0 0 12px rgba(255, 0, 0, 0.2);
-  margin-bottom: 1rem;
 }
 
 /* === Section Dividers === */
@@ -254,20 +239,24 @@ margin-top: 7rem;
   margin-top: 3rem;
 }
 
-/* === Character Rows === */
+/* === NEW CARD CLASS=== */
 .profile-card {
   display: flex;
-  gap: 2rem;
-  align-items: center;
-  justify-content: flex-start;
-  margin-bottom: 2rem;
+  transition: transform 0.25s ease, border 0.25s ease, box-shadow 0.25s ease;
+  border-radius: 1rem;
+  backdrop-filter: blur(2px);
   background: rgba(16, 24, 32, 0.35);
   border: 1px solid rgba(228, 0, 43, 0.25);
-  border-radius: 1rem;
   padding: 1.8rem 2rem;
-  backdrop-filter: blur(2px);
-  transition: transform 0.25s ease, border 0.25s ease, box-shadow 0.25s ease;
+  align-items: center;
+
+  
+  justify-content: flex-start;
+  margin-bottom: 2rem;
+  border-radius: 1rem;
 }
+
+/* === Character Rows === */
 
 /* Image Box */
 .profile-card__image {
@@ -288,84 +277,23 @@ margin-top: 7rem;
 /* Villains (fixed to show tint + image) */
 .profile-card__image--villain {
   border-color: var(--accent-color);
-  filter: drop-shadow(0 0 12px rgba(228, 0, 43, 0.55));
+  filter: drop-shadow(0 0 12px var(--glow-color));
 }
 
 /* Modified profile-card__image--villain class exclusive to monsters page to fix shape, size, and mobile responsiveness*/
-.profile-card__image--villain--monster {
-  border-color: var(--accent-color);
-  filter: drop-shadow(0 0 12px rgba(228, 0, 43, 0.55));
+.profile-card__image--rectangle {
   width: 400px;
   max-width: 100%;
   margin-bottom: 1rem;
 }
 
-/* Monster Text */
-.gallery__card__h3 {
-  font-family: var(--header-fonts);
-  font-size: 2rem;
-  margin: 0.5rem 0;
-  color: #E4002B;
-  text-transform: uppercase;
-}
-
-.gallery__card__p {
-  color: #ddd;
-  font-size: 1rem;
-  line-height: 1.5;
-}
-
-/* Caption-style text */
-.gallery__card__role {
-  font-family: var(--header-fonts);
-  font-size: 0.95rem;
-  font-style: italic;
-  color: #E4002B;
-  margin-bottom: 1rem;
-  opacity: 0.9;
-}
-
-
-/* Science Section */
-.science {
-  margin: 3rem 1rem;
-  max-width: 1840px;
-}
-
-.science .main_subheader {
-  font-size: 2rem;
-  color: var(--accent-color, #ff3b3b);
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  margin-bottom: 1.5rem;
-}
-
-.science__content {
-  display: flex;
-  align-items: flex-start;
-  justify-content: space-between;
-  gap: 2rem;
-  margin-top: 1rem;
-}
-
-.science__image {
-  width: 40%;
-  border-radius: 8px;
-  border: 1px solid rgba(255, 0, 0, 0.6);
-  box-shadow: 0 0 12px rgba(255, 0, 0, 0.2);
-}
-
-/* Adds Spacing to paragraph text to be similar to spacing in cards. ASK IF WANTED TO MAKE UNIVERSAL <p> CLASS */
-.science__content__p {
-  line-height: 1.5;
-}
 
 /* Hover Interaction + Red Glow */
 .profile-card:hover {
   transform: scale(1.03);
   background: rgba(16, 24, 32, 0.35);
   border-color: var(--accent-color);
-  box-shadow: 0 0 15px 3px rgba(228, 0, 43, 0.55);
+  box-shadow: 0 0 15px 3px var(--glow-color);
   cursor: pointer;
   position: relative;
 }
@@ -579,7 +507,7 @@ margin-top: 7rem;
     max-width: 90%;
   }
 
-  .gallery__card {
+  .profile-card__horizontal {
     width: 90%;
   }
 
@@ -633,13 +561,11 @@ margin-top: 7rem;
     width: fit-content;
   }
 
-  .profile-card__image--villain--monster {
-    border-color: var(--accent-color);
-    filter: drop-shadow(0 0 12px rgba(228, 0, 43, 0.55));
+  .profile-card__image--rectangle {
     width: 400px;
     max-width: 100%;
   }
-  
+
   .iframe_responsive {
     width: auto;
     height: auto;
