@@ -3,29 +3,132 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Learn more about the TV show Stranger Things and watch it on Netflix">
     <title>Stranger Things</title>
     <link rel="shortcut icon" href="./images/Stranger_Things_logo.svg">
     <link rel="stylesheet" href="style.css">
+
 </head>
+
 <body class="body">
     <header class="header">
         <nav class="header__nav">
             <a href="index.html" class="header__nav__logo"><img src="./images/Stranger_Things_logo.svg" class="header__nav__logo__image" alt="Stranger Things Logo"/></a>
             <a onclick="showAndHideClass('.header__nav__pages')" class="header__nav_link"><img src="images/List-Menu.svg" alt="List Menu" class="header__nav__link__icon"/></a>
-            <div class="header__nav__pages">
+            <section class="header__nav__pages">
                <a href="index.html" class="header__nav__pages__link links--transition">Home</a>
                <a href="characters.html" class="header__nav__pages__link links--transition">Characters</a>
                <a href="monstersMysteries.html" class="header__nav__pages__link links--transition">Monsters & Mysteries</a>
                <a href="behindTheScenes.html" class="header__nav__pages__link links--transition">Behind the Scenes</a>
-            </div>
+            </section>
         </nav>
     </header>
-    <main class="main">
-        I am main content of the Monsters & Mysteries page
-    </main>
-    <footer class="footer">
-        &copy; 2025
-    </footer>
-    <script src="./script.js"></script>
+
+<main class="main main__article">
+    <section class="main__header">
+      <h1 class="page-title__heading">Monsters and Mysteries</h1>
+    </section>
+
+<!-- MONSTER GALLERY -->
+  <section class="gallery">
+    <h2 class="main__subheader">Monsters of the Upside-Down</h2>
+
+    <section class="gallery__grid">
+      <!-- MONSTER CARD 1 -->
+      <article class="profile-card__horizontal profile-card">
+        <img class="profile-card__image profile-card__image--rectangle img--margin_around profile-card__image--villain"
+          src="https://static0.colliderimages.com/wordpress/wp-content/uploads/2022/08/stranger-things-vfx-demogorgon-social-featured.jpg?q=50&fit=crop&w=825&dpr=1.5"
+          alt="Demogorgon"
+        />
+        <h3 class="profile-card__name">Demogorgon</h3>
+        <p class="profile-card__role">The Original Terror of Hawkins</p>
+        <p class= "profile-card__bio">
+          A humanoid beast with a flowered head of teeth, hunting by scent and sound. Moving by night,
+           this creature began it's reign of terror by dragging young Hawkins local,
+           Will Byers, into the Upside-Down.
+        </p>
+      </article>
+
+      <!-- MONSTER CARD 2 -->
+      <article class="profile-card__horizontal profile-card">
+        <img class="profile-card__image profile-card__image--rectangle img--margin_around profile-card__image--villain"
+          src="https://static0.colliderimages.com/wordpress/wp-content/uploads/2022/07/Mind_Flayer.jpg"
+          alt="Mind Flayer"
+        />
+        <h3 class="profile-card__name">The Mind Flayer</h3>
+        <p class="profile-card__role">The Monsterous Hive-Mind</p>
+        <p class= "profile-card__bio">
+          An interdimensional entity that has the power to control countless creatures
+          and people through psychic domination. It manipulates lesser
+          creatures and those it possesses through psychic tendrils, seeking to
+          merge the Upside Down and Hawkins into chaos.
+        </p>
+      </article>
+
+      <!-- MONSTER CARD 3 -->
+      <article class="profile-card__horizontal profile-card">
+        <img class="profile-card__image profile-card__image--rectangle img--margin_around profile-card__image--villain"
+          src="https://static0.colliderimages.com/wordpress/wp-content/uploads/2022/07/demodog.jpg?q=50&fit=crop&w=825&dpr=1.5"
+          alt="Demodogs"
+        />
+        <h3 class="profile-card__name">Demodogs</h3>
+        <p class="profile-card__role">Pack Hunters of the Upside-Down</p>
+        <p class= "profile-card__bio">
+          These creatures are adolescent Demogorgons, and no less deadly than their adult counterparts.
+          They're fast, vicious, and loyal to the Mind Flayer as their leader.
+          They hunt in packs and overwhelm their prey with sheer numbers and
+          agility.
+        </p>
+      </article>
+
+      <!-- MONSTER CARD 4 -->
+      <article class="profile-card__horizontal profile-card">
+        <img class="profile-card__image profile-card__image--rectangle img--margin_around profile-card__image--villain"
+          src="https://static0.colliderimages.com/wordpress/wp-content/uploads/2022/07/stranger-things-Vecna-Jamie-Campbell-Bower.jpg"
+          alt="Vecna"
+        />
+        <h3 class="profile-card__name">Vecna</h3>
+        <p class="profile-card__role">The Sinister Mastermind of The Upside-Down</p>
+        <p class= "profile-card__bio">
+          A dark god of the Upside-Down who twists the fears and guilt of
+          Hawkins’ residents into deadly visions. He seeks to merge his realm
+          with reality, spreading his reach from the Upside-Down into the real world, staring with Hawkins.
+        </p>
+      </article>
+    </section>
+  </section>
+
+
+<!-- SCIENCE BEHIND THE STRANGE -->
+  <section>
+      <section class="main__article section__flex_row_desktop">
+          <section>
+            <h2 class="main__subheader">Science Behind the Strange</h2>
+              <p>
+                Deep within the quiet town of Hawkins, Indiana, the Hawkins National Laboratory conducted government-funded
+                research that delved far beyond the ordinary. What began as scientific exploration soon touched on the
+                extraordinary—experiments involving perception, consciousness, and dimensions unseen by most.
+              </p>
+              <p>
+                Though the lab’s work was meant to stay secret, its discoveries opened doors that were never meant to be opened,
+                allowing forces from elsewhere to slip through. The strange phenomena that followed would forever change the lives
+                of those who called Hawkins home.
+              </p>
+          </section>
+
+          <img 
+            src="https://storage.googleapis.com/moviemaps/img/13gw.4dphvh.940.jpg" 
+            alt="Hawkins Lab" 
+            class="img--fade_in img--padding_around img--block"
+          />
+        </section>
+</main>
+
+
+<footer class="footer">
+    &copy; 2025
+</footer>
+<script src="./script.js"></script>
+
 </body>
 </html>
